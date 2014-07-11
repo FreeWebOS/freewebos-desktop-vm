@@ -6,7 +6,7 @@ default_box_url = 'http://files.vagrantup.com/precise32.box'
 
 # Node names
 nodes = [
-  { :hostname => 'webos-desktop',   :ip => '192.168.0.41' },
+  { :hostname => 'openwebos-desktop',   :ip => '192.168.0.41' },
 ]
 # Network settings (host and domain)
 domain   = 'example.org'
@@ -46,6 +46,9 @@ Vagrant::Config.run do |config|
         '--name', node[:hostname],
         '--memory', memory.to_s
       ]
+
+      # Enable X11 forwarding over SSH
+      config.ssh.forward_x11   = true
     end
   end
   
