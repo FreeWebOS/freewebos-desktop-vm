@@ -3,11 +3,15 @@
 # Performs initial configuration tasks for all Vagrant boxes.
 #
 class baseconfig {
-  # TODO do we need this?
-  # exec { 'apt-get -f install --yes':
-  #   command => '/usr/bin/apt-get -f install --yes';
-  # }
   include apt
+  include git
+
+  # Clone Open WebOS build repo
+  git::repo{'openwebos':
+   path   => '/usr/src/openwebos-build-desktop',
+   source => 'https://github.com/openwebos/build-desktop.git'
+  }
+
 
   exec { 'apt-get update':
     command => '/usr/bin/apt-get update';
@@ -20,7 +24,7 @@ class baseconfig {
   package { "vim": ensure => "installed" }
 
   ### WebOS desktop prerequisites ###
-  package { "git": ensure => "installed" }
+  # package { "git": ensure => "installed" } -- git puppet module deals with that
   package { "git-core": ensure => "installed" }
   package { "pkg-config": ensure => "installed" }
   package { "make": ensure => "installed" }
