@@ -3,12 +3,11 @@ openwebos-desktop-vm
 
 VM for building and running Open WebOS
 
-To start the VM up run
+To start the VM and install all the dependencies run
 ```
 vagrant up
 ```
-If you get error messages about installing packages, run 
-```
-vagrant provision
-```
-repeatedly until all the packages are installed
+After that the sources end up in `/usr/src/openwebos-build-desktop`. Follow
+instructions on https://github.com/openwebos/build-desktop to build and run the
+interface (don't forget that /usr requires root).
+
