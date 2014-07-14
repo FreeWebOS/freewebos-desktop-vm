@@ -1,8 +1,8 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-default_box     = 'ubuntu/precise32'
-default_box_url = 'https://vagrantcloud.com/ubuntu/precise32/version/1/provider/virtualbox.box'
+default_box     = 'hashicorp/precise32'
+default_box_url = 'https://vagrantcloud.com/hashicorp/precise32/version/1/provider/virtualbox.box'
 
 # Node names
 nodes = [
