@@ -15,7 +15,7 @@ class openwebos {
   # Clone Open WebOS build repo
   git::repo{'openwebos':
    path   => '/usr/src/openwebos-build-desktop',
-   source => 'https://github.com/openwebos/build-desktop.git'
+   source => 'https://github.com/freewebos/build-desktop.git'
   }
   ->
 
