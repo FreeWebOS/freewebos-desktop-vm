@@ -1,6 +1,6 @@
 # == Class: openwebos
 #
-# Installs openwebos desktop
+# Install openwebos desktop prerequisites and downloads the sources
 #
 class openwebos {
   include apt
