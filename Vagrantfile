@@ -2,7 +2,9 @@
 # vi: set ft=ruby :
 
 default_box     = 'hashicorp/precise64'
-default_box_url = 'https://vagrantcloud.com/hashicorp/precise64/version/2/provider/virtualbox.box'
+default_box_url = 'http://files.vagrantup.com/precise64.box'
+# The same thing, but via Vagrant Cloud
+# default_box_url = 'https://vagrantcloud.com/hashicorp/precise64/version/2/provider/virtualbox.box'
 
 # Node names
 nodes = [
