@@ -8,7 +8,7 @@ default_box_url = 'http://files.vagrantup.com/precise64.box'
 
 # Node names
 nodes = [
-  { :hostname => 'openwebos-desktop',   :ip => '192.168.0.41' },
+  { :hostname => 'openwebos-desktop', :ip => '192.168.0.41', :memory => '1024'},
 ]
 # Network settings (host and domain)
 domain   = 'example.org'
